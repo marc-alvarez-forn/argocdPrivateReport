@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   annotations:
     argocd.argoproj.io/sync-options: Prune=false
-  name: guestbook-ui
+  name: guestbook-uii
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: guestbook-uii
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: guestbook-uii
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
-        name: guestbook-ui
+        name: guestbook-uii
         ports:
         - containerPort: 80
