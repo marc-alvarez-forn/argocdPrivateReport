@@ -13,7 +13,7 @@ spec:
       labels:
         app: guestbook-ui
         moto: honda
-        pepe: 12
+        pepe: manolo
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
