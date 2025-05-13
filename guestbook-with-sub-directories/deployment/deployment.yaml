@@ -59,3 +59,34 @@ spec:
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: guestbook-uiii
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: guestbook-uiii
+  template:
+    metadata:
+      labels:
+        app: guestbook-uiii
+    spec:
+      containers:
+      - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        name: guestbook-uiii
+        ports:
+        - containerPort: 80
+        startupProbe:
+          failureThreshold: 30
+          httpGet:
+            path: /
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 180
+          periodSeconds: 10
+          successThreshold: 1
+          timeoutSeconds: 1
