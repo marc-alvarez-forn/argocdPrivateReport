@@ -13,6 +13,10 @@ spec:
         app: guestbook-ui
         prova: pepe
     spec:
+      initContainers:
+      - name: init-create-dir
+        image: alpine
+        command: ['sh', '-c', 'sleep 5 && echo "creating dir"']
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
         name: guestbook-ui
