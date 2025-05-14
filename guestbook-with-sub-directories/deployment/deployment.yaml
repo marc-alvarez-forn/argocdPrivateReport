@@ -14,7 +14,8 @@ spec:
         prova: pepe
         super: pepegotera
         provafinal: value
-        provafii: valuer
+        provafii: value
+        provafiii: value
         valor: esValor
         otrafi: value        
     spec:
