@@ -15,6 +15,7 @@ spec:
         super: pepegotera
         provafinal: value
         provafii: valuer
+        valor: esValor
         otrafi: value        
     spec:
       containers:
