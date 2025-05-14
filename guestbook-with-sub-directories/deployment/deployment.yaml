@@ -11,8 +11,6 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
-        moto: honda
-        pepe: manolo
         prova: pepe
         super: pepegotera
     spec:
