@@ -16,6 +16,7 @@ spec:
         provafi: value
         provafinal: value
         provafii: value
+        otrafi: value
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
