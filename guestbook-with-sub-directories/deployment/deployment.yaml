@@ -13,7 +13,6 @@ spec:
         app: guestbook-ui
         prova: pepe
         super: pepegotera
-        provafi: value
         provafinal: value
         provafii: value
         otrafi: value
