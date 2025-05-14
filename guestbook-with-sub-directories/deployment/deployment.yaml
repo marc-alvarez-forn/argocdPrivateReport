@@ -15,6 +15,7 @@ spec:
         super: pepegotera
         provafi: value
         provafinal: value
+        provafii: value
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
