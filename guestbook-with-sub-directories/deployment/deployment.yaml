@@ -12,12 +12,6 @@ spec:
       labels:
         app: guestbook-ui
         prova: pepe
-        super: pepegotera
-        provafinal: value
-        provafii: value
-        provafiii: value
-        valor: esValor
-        otrafi: value        
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
