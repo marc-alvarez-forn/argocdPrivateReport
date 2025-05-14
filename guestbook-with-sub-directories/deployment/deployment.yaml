@@ -14,9 +14,8 @@ spec:
         prova: pepe
         super: pepegotera
         provafinal: value
-        provafii: value
-        otrafi: value
-        otrafa: value        
+        provafii: valuer
+        otrafi: value        
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
@@ -64,3 +63,46 @@ spec:
           periodSeconds: 10
           successThreshold: 1
           timeoutSeconds: 1
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webhookservice
+  namespace: argocd
+  labels:
+    app: webhookservice
+spec:
+  selector:
+    matchLabels:
+      app: webhookservice
+  template:
+    metadata:
+      labels:
+        app: webhookservice
+    spec:
+      containers:
+        - name: micro
+          image: marc/webhook-demo:1.6.0
+          ports:
+            - containerPort: 8080
+          env:
+            - name: PORT
+              value: "8080"
+          readinessProbe:
+            periodSeconds: 15
+            httpGet:
+              path: /actuator/health
+              port: 8080
+          livenessProbe:
+            periodSeconds: 15
+            httpGet:
+              path: /actuator/health
+              port: 8080
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 400m
+              memory: 512Mi
+---
