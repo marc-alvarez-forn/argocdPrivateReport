@@ -88,7 +88,7 @@ spec:
             - name: PORT
               value: "8080"
           readinessProbe:
-            periodSeconds: 15
+            periodSeconds: 14
             httpGet:
               path: /actuator/health
               port: 8080
