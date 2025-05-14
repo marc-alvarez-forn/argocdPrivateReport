@@ -68,7 +68,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: webhookservice
-  namespace: argocd
   labels:
     app: webhookservice
 spec:
