@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: guestbook-ui
@@ -11,7 +11,7 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
-        prova: pepe
+        prova: pep
     spec:
       initContainers:
       - name: init-create-dir
