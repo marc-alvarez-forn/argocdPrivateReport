@@ -13,6 +13,7 @@ spec:
         app: guestbook-ui
         prova: pep
         josep: mariaoiiieee
+        otrolabel: milabel
     spec:
       initContainers:
       - name: init-create-dir
