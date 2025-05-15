@@ -12,7 +12,7 @@ spec:
       labels:
         app: guestbook-ui
         prova: pep
-        josep: maria
+        josep: mariao
     spec:
       initContainers:
       - name: init-create-dir
